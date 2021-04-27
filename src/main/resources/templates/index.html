@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments :: html_head">
 <title>Shreyatronics</title>
 </head>
 <body>
-	<h1>Welcome to shreyatronics</h1>
+<header th:insert="fragments :: header"></header>
+	<div align="center" class="jumbotron vertical-center mx-5 my-5">
+        <h2>Welcome to Shreyatronics!</h2>
+        <p>We are dealers in Gilard and Sonya products</p>
+            <div class="container">
+                <a href="gilard" class="btn btn-dark btn-lg my-5">View Gilard products</a>
+            </div>
+            <div class="container">
+                <a href="sonya" class="btn btn-dark btn-lg my-5">View Sonya products</a>
+            </div>
+    </div>
+<footer th:insert="fragments :: footer" class="footer-position footer-fix text-center"> </footer>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:fragment="html_head">
+	<meta charset="ISO-8859-1">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+ 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		.center {
+		    display: block;
+		    margin-left: auto;
+		  margin-right: auto;  
+		}
+		.navbar-brand{
+			font-size: 30px;
+			padding-left: 50px;
+		}
+		.footer-fix{
+			bottom: 0;
+			width: 100%;
+			height: 40px;
+			background-color:#222222;
+			color: white;
+		}
+		
+		.footer-position{
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<div th:fragment="header">
+		<nav class="navbar navbar-toggleable-xl bg-dark navbar-dark py-3" >
+			<!-- Brand -->
+			<a class="navbar-brand mx-auto" href="/">Shreyatronics</a>
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" 
+										   data-toggle="collapse"
+										   data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/gilard">Gilard</a></li>
+					<li class="nav-item"><a class="nav-link" href="/sonya">Sonya</a></li>
+					<li class="nav-item"><a class="nav-link" href="/contact-us">Contact us</a></li>
+				</ul>
+			</div>
+		</nav>
+		<br><br>
+	</div>
+	
+	<footer th:fragment="footer">
+    	<span>All rights reserved 2020 @<a class="text-light" href="http://localhost:8080/">www.shreyatronics.com</a></span>
+	</footer>
+</body>
+</html>
