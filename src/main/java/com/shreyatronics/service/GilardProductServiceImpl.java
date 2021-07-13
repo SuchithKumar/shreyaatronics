@@ -8,7 +8,9 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.shreyatronics.dao.TerminalBlockRepo;
 import com.shreyatronics.dao.ToggleSwitchRepo;
+import com.shreyatronics.entities.TerminalBlock;
 import com.shreyatronics.entities.ToggleSwitch;
 
 @Service
@@ -16,6 +18,9 @@ public class GilardProductServiceImpl implements GilardProductService {
 
 	@Autowired
 	private ToggleSwitchRepo toggleSwitchRepo;
+
+	@Autowired
+	private TerminalBlockRepo terminalBlockRepo;
 
 	@Override
 	public List<ToggleSwitch> findAllToggleSwitches() {
@@ -29,6 +34,12 @@ public class GilardProductServiceImpl implements GilardProductService {
 		toggleSwitchTypes.add(2,"Triple Pole");
 		toggleSwitchTypes.add(3,"Four Pole");
 		return toggleSwitchTypes;
+	}
+
+	@Override
+	public List<TerminalBlock> findAllTerminalBlocks() {
+		// TODO Auto-generated method stub
+		return terminalBlockRepo.findAll();
 	}
 
 }
